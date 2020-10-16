@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class String {
 private:
 	int stringLength;
@@ -26,7 +25,6 @@ public:
 	char& operator[](int i);
 	void sortMassiveByFirtsLetter(String list[], int n);
 	void sortMassiveByLengths(String list[], int n);
-=======
 class String {
 private:
 	int stringLength;
@@ -54,5 +52,4 @@ public:
 	char& operator[](int i);
 	void sortMassiveByFirtsLetter(String list[], int n);
 	void sortMassiveByLengths(String list[], int n);
->>>>>>> ce0413e569a2969f7198039809b714d8a8a48428
 };
