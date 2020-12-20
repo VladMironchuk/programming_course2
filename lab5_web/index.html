@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body ng-controller="AppController">
+    <table>
+        <thead>
+            <tr>
+                <th ng-repeat="key in keys">{{key}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="student in students">
+                <td>
+                    {{student.name}}
+                </td>
+                <td>
+                    {{student.surname}}
+                </td>
+                <td>
+                    {{student.age}}
+                </td>
+                <td class="avmark">
+                    {{student.avmark}}
+                </td>
+                <td>
+                    <button ng-click="deleteStudent()">
+                        Delete
+                    </button>
+                </td>
+                <td>
+                    <button ng-click="editStudent()">
+                        Edit
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        Average mark : {{getAvMark()}}
+    </div>
+    <div>
+        <p ng-repeat="key in keys">
+            <span>{{key}}</span>
+            <input /> 
+        </p>
+    </div>
+    <div>
+        <button ng-click="addStudent()">
+            Add Student
+        </button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
